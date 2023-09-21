@@ -56,14 +56,14 @@ function mostrarProducto()
 function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 {
     let productoBarato = null;//Mantiene el registro de los productos baratos
-    Productos.forEach((elemento,indice,Productos)=>
+    Productos.forEach((elemento,indice,Productos)=>//Va a recorrer los elementos y que tomara 3 elementos 
     {
-     let precio = elemento.precio;
+     let precio = elemento.precio;//Se saca el precio del elemento actual y se guarda en en la variable precio igual que con los otros
      let nombre = elemento.nombre;
      let local = elemento.local;
      
-     if (!productoBarato || precio < productoBarato.precio) 
-     {
+     if (!productoBarato || precio < productoBarato.precio) //!productoBarato comprueba si no encontro otro producto mas barato
+     {                                                      //precio < productoBarato.precio comprueba si el precio del producto es menor que precio de productoBarato
             productoBarato = {
             nombre: nombre,
             precio: precio,
@@ -77,7 +77,7 @@ function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 //productoBarato.forEach(producto => 
 //{
 //productoBarato = productoBarato + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;
-if(productoBarato){
+if(productoBarato){//Si contiene un valor se ejecutara la condicion dentro 
 let ProductoBarato = `Nombre del producto: ${productoBarato.nombre}-Precio del producto: $${productoBarato.precio}--Nombre del local ${productoBarato.local}`;
 document.getElementById("productoMenorPrecio").innerHTML = ProductoBarato;
 }
