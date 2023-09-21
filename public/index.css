@@ -1,0 +1,44 @@
+body{ 
+    background-color: #ffe0b2;
+    
+    }
+    h1{
+        text-align: center;
+        color: #1a0e06;
+    }
+    #conteiner{
+        
+       text-align: center;
+       margin: auto;
+       max-width: 215px;
+    }
+    button {
+        background-color: #ffb74d; 
+        color: black;  
+        padding: 5px 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    label
+    {
+
+        font-size: 25px;
+        color: #A18262;
+    }
+    h5{
+        color:#090504;
+        font-size: 17px;
+        display: block;
+    }
+    input
+    {
+     font-size: 25px;
+    }
+    h2
+    {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color:crimson;
+    }
