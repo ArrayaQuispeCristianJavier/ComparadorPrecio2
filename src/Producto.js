@@ -15,6 +15,7 @@ document.getElementById("RegistroProducto").onclick = () =>
     Productos.push({nombre,precio,local});
 
     mostrarProducto();
+    //productoMenorPrecio();
     
     
     
@@ -45,7 +46,11 @@ function mostrarProducto()
     let registroProducto = "";
     Productos.forEach(function(elemento)
     {
+<<<<<<< HEAD
         registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre} -- Precio del producto: $ ${elemento.precio} -- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
+=======
+        registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre}----Precio del producto:$ ${elemento.precio}---- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
+>>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
     });
     document.getElementById("Registros").innerHTML = registroProducto;
 }
@@ -55,14 +60,14 @@ function mostrarProducto()
 function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 {
     let productoBarato = null;//Mantiene el registro de los productos baratos
-    Productos.forEach((elemento,indice,Productos)=>
+    Productos.forEach((elemento,indice,Productos)=>//Va a recorrer los elementos y que tomara 3 elementos 
     {
-     let precio = elemento.precio;
+     let precio = elemento.precio;//Se saca el precio del elemento actual y se guarda en en la variable precio igual que con los otros
      let nombre = elemento.nombre;
      let local = elemento.local;
      
-     if (!productoBarato || precio < productoBarato.precio) 
-     {
+     if (!productoBarato || precio < productoBarato.precio) //!productoBarato comprueba si no encontro otro producto mas barato
+     {                                                      //precio < productoBarato.precio comprueba si el precio del producto es menor que precio de productoBarato
             productoBarato = {
             nombre: nombre,
             precio: precio,
@@ -76,18 +81,24 @@ function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 //productoBarato.forEach(producto => 
 //{
 //productoBarato = productoBarato + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;
+<<<<<<< HEAD
 if(productoBarato){
 let ProductosBaratos = `Nombre del producto: ${productoBarato.nombre} -- Precio del producto mas bajo: $${productoBarato.precio} -- Nombre del local: ${productoBarato.local}`;
 document.getElementById("productoMenorPrecio").innerHTML = ProductosBaratos;
+=======
+if(productoBarato){//Si contiene un valor se ejecutara la condicion dentro 
+let ProductoBarato = `Nombre del producto: ${productoBarato.nombre}-Precio del producto: $${productoBarato.precio}--Nombre del local ${productoBarato.local}`;
+document.getElementById("productoMenorPrecio").innerHTML = ProductoBarato;
+>>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
 }
 //}
 }  
 
 
-/*document.getElementById("enlistar").onclick = () =>
+document.getElementById("enlistar").onclick = () =>
 {
     Productos.forEach(function(elementos)
 {
     console.log(elementos.precio);   
 });
-};*/
+};

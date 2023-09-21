@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 body{
     background-color: #F9E0BB;
+=======
+body{ 
+    background-color: #ffe0b2;
+>>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
     
     }
     h1{
         text-align: center;
+<<<<<<< HEAD
         color: #F2ECBE; 
         background-color: #9A3B3B;
         font-style: italic;
@@ -85,3 +91,43 @@ body{
         border-color: #3f3f3f;
     }
     
+=======
+        color: #1a0e06;
+    }
+    #conteiner{
+        
+       text-align: center;
+       margin: auto;
+       max-width: 215px;
+    }
+    button {
+        background-color: #ffb74d; 
+        color: black;  
+        padding: 5px 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    label
+    {
+
+        font-size: 25px;
+        color: #A18262;
+    }
+    h5{
+        color:#090504;
+        font-size: 17px;
+        display: block;
+    }
+    input
+    {
+     font-size: 25px;
+    }
+    h2
+    {
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     color:crimson;
+    }
+>>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
