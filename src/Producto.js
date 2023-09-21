@@ -46,11 +46,8 @@ function mostrarProducto()
     let registroProducto = "";
     Productos.forEach(function(elemento)
     {
-<<<<<<< HEAD
         registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre} -- Precio del producto: $ ${elemento.precio} -- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
-=======
-        registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre}----Precio del producto:$ ${elemento.precio}---- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
->>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
+
     });
     document.getElementById("Registros").innerHTML = registroProducto;
 }
@@ -81,15 +78,10 @@ function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 //productoBarato.forEach(producto => 
 //{
 //productoBarato = productoBarato + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;
-<<<<<<< HEAD
 if(productoBarato){
 let ProductosBaratos = `Nombre del producto: ${productoBarato.nombre} -- Precio del producto mas bajo: $${productoBarato.precio} -- Nombre del local: ${productoBarato.local}`;
 document.getElementById("productoMenorPrecio").innerHTML = ProductosBaratos;
-=======
-if(productoBarato){//Si contiene un valor se ejecutara la condicion dentro 
-let ProductoBarato = `Nombre del producto: ${productoBarato.nombre}-Precio del producto: $${productoBarato.precio}--Nombre del local ${productoBarato.local}`;
-document.getElementById("productoMenorPrecio").innerHTML = ProductoBarato;
->>>>>>> 664189dfdeee42e58f54b39e1b70a983a3ab892b
+
 }
 //}
 }  
