@@ -45,7 +45,7 @@ function mostrarProducto()
     let registroProducto = "";
     Productos.forEach(function(elemento)
     {
-        registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
+        registroProducto = registroProducto + `Nombre del producto: ${elemento.nombre} -- Precio del producto: $ ${elemento.precio} -- Nombre del local: ${elemento.local}<br>`;//br sirve para separar los productos e evitar que se muestre todo junto
     });
     document.getElementById("Registros").innerHTML = registroProducto;
 }
@@ -77,7 +77,7 @@ function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
 //{
 //productoBarato = productoBarato + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;
 if(productoBarato){
-let ProductosBaratos = `Nombre del producto: ${productoBarato.nombre}--Precio del producto mas bajo: $${productoBarato.precio}--Nombre del local ${productoBarato.local}`;
+let ProductosBaratos = `Nombre del producto: ${productoBarato.nombre} -- Precio del producto mas bajo: $${productoBarato.precio} -- Nombre del local: ${productoBarato.local}`;
 document.getElementById("productoMenorPrecio").innerHTML = ProductosBaratos;
 }
 //}

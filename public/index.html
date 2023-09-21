@@ -12,26 +12,33 @@
   <div id="conteiner">
 
     <form>
-     <label>Nombre del producto</label>
-     <input id="NombreProducto">
+     <label>Nombre del producto</label><br>
+     <input id="NombreProducto"><br>
+
+     <label>Precio del producto</label><br>
+     <input id="PrecioProducto" type="number"><br>
+
+  
+     <label for="NombreComercio">Nombre del comercio</label> <br>
+     <select id="NombreComercio">
+      <option value="">--Elija un comercio--</option>
+      <option value="Vea">Vea</option>
+      <option value="Carrefour">Carrefour</option>
+      <option value="Dia">Dia</option>
+      <option value="Comodin">Comodin</option>
+      <option value="ChangoMas">ChangoMas</option>
+    </select> <br>
      
 
-     <label>Precio del producto</label>
-     <input id="PrecioProducto" type="number">
-     
-
-     <label>Nombre del comercio</label>
-     <input id="NombreComercio">
-    
      <button id="RegistroProducto" type="button">Guardar producto</button>
      <button id="productoDeMenorPrecio" type="button">Guardar producto de menor precio</button>
      <!-- <button id="enlistar" type="button">Listar producto</button> -->
 
-      <h2>Lista de productos</h2>
+      <h2>Lista de productos:</h2>
       <h5 id="Registros"></h5>
 
       
-      <h2>Lista de producto con menor precio</h2>
+      <h2>Lista de producto con menor precio:</h2>
       <h5 id="productoMenorPrecio"></h5>
      </form>
   </div>
