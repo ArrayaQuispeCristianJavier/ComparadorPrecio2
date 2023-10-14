@@ -3,8 +3,8 @@ let producto =
  nombreProducto:"",
  precioProducto:0,
  nombreLocal: ""
-};
-let Productos = [];
+}
+let Productos = [];//Definimos un array llamada Productos que almacena cada producto que se ingrese
 document.getElementById("RegistroProducto").onclick = () =>
 {
     
@@ -15,14 +15,14 @@ document.getElementById("RegistroProducto").onclick = () =>
     Productos.push({nombre,precio,local});
 
     mostrarProducto();
-    //productoMenorPrecio();
+    
     
     
     
     
 
 
-    //console.log(Productos.producto.precio);
+    
 
     document.getElementById("PrecioProducto").value = "";
     document.getElementById("NombreProducto").value = "";
@@ -36,10 +36,10 @@ document.getElementById("RegistroProducto").onclick = () =>
             console.log(local);
        
 };
-
+/*Cuando se presione el boton de producto de menor precio se va a ejecutar la funcion*/
 document.getElementById("productoDeMenorPrecio").onclick = () =>
 {
-productoMenorPrecio();//Hacer otro boton para ejecutar la funcion
+productoMenorPrecio();
 };
 function mostrarProducto()
 {
@@ -54,17 +54,20 @@ function mostrarProducto()
 
  
     
-function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
+function productoMenorPrecio() 
 {
-    let productoBarato = null;//Mantiene el registro de los productos baratos
-    Productos.forEach((elemento,indice,Productos)=>//Va a recorrer los elementos y que tomara 3 elementos 
+    let productoBarato = null;//Se usara para tener el producto mas barato
+    let registroProductoComparado = "";
+    Productos.forEach((elemento)=>
     {
-     let precio = elemento.precio;//Se saca el precio del elemento actual y se guarda en en la variable precio igual que con los otros
+     let precio = elemento.precio;
      let nombre = elemento.nombre;
      let local = elemento.local;
-     
-     if (!productoBarato || precio < productoBarato.precio) //!productoBarato comprueba si no encontro otro producto mas barato
-     {                                                      //precio < productoBarato.precio comprueba si el precio del producto es menor que precio de productoBarato
+     //verifica que no encontro ningun producto mas barato
+     //Va a ver si el producto actual es igual al nombre del producto mas barato y si su precio es mas bajo
+     //verifica si el nombre del producto no es igual al nombre del producto mas barato
+     if (!productoBarato || (nombre === productoBarato.nombre && precio < productoBarato.precio) || (nombre !== productoBarato.nombre))
+     {                                                      
             productoBarato = {
             nombre: nombre,
             precio: precio,
@@ -72,18 +75,12 @@ function productoMenorPrecio() //VA A RECORRER EL PRODUCTO HACIA EL SIGUIENTE
         }; 
      }
      
-});
-
-// Muestra los productos más baratos
-//productoBarato.forEach(producto => 
-//{
-//productoBarato = productoBarato + `Nombre del producto: ${elemento.nombre}-- Precio del producto:$ ${elemento.precio}-- Nombre del local: ${elemento.local}<br>`;
+//Si se encontro un producto mas barato va a ejecutarlo
 if(productoBarato){
-let ProductosBaratos = `Nombre del producto: ${productoBarato.nombre} -- Precio del producto mas bajo: $${productoBarato.precio} -- Nombre del local: ${productoBarato.local}`;
-document.getElementById("productoMenorPrecio").innerHTML = ProductosBaratos;
-
+registroProductoComparado += `Nombre del producto: ${productoBarato.nombre} -- Precio del producto más bajo: $${productoBarato.precio} -- Nombre del local: ${productoBarato.local}<br>`;
 }
-//}
+});
+document.getElementById("ProductosComparados").innerHTML = registroProductoComparado;
 }  
 
 
